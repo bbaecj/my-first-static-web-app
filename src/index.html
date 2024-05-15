@@ -1,66 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Button Page</title>
+  <title>Button Weiterleitung</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #f0f0f0;
+      margin: 0;
     }
-    .button-container {
-      display: flex;
-      justify-content: space-around;
-    }
-    .button {
+    button {
       padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      border-radius: 5px;
+      font-size: 18px;
       cursor: pointer;
-      transition: all 0.3s ease;
-    }
-    .button:hover {
-      transform: scale(1.1);
     }
   </style>
 </head>
 <body>
-  <audio id="rickrollAudio">
-    <source src="rickroll.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <div class="button-container">
-    <button class="button" onclick="playRickroll()">Rickroll</button>
-    <button class="button" onclick="redirectToGoogle()">Google</button>
-    <button class="button" onclick="showImage()">Nothing</button>
-    <button class="button" onclick="redirectToFirefox()">Firefox</button>
-  </div>
-
-  <script>
-    function playRickroll() {
-      var audio = document.getElementById('rickrollAudio');
-      audio.play();
-      window.location.href = 'rickroll.html'; // Hier müsstest du die URL zu deiner Rickroll-Seite einfügen
-    }
-
-    function redirectToGoogle() {
-      window.location.href = 'https://www.google.com';
-    }
-
-    function showImage() {
-      window.location.href = 'nothing.html'; // Hier müsstest du die URL zu deiner Seite mit dem Bild einfügen
-    }
-
-    function redirectToFirefox() {
-      window.location.href = 'https://www.mozilla.org/en-US/firefox/new/';
-    }
-  </script>
+  <button onclick="window.location.href='https://th.bing.com/th/id/OIP.OfnHVIAm6V3xqAHV6VGiCAHaFj?w=217&h=180&c=7&r=0&o=5&pid=1.7'">Weiter</button>
 </body>
 </html>
