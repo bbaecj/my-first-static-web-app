@@ -1,71 +1,17 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online-Shop</title>
-    <style>
-        /* Stil für das Verzeichnis */
-        #verzeichnis {
-            width: 200px;
-            float: left;
-            background-color: #f2f2f2;
-            padding: 20px;
-            box-sizing: border-box;
-            transition: width 0.5s ease;
-            overflow: hidden;
-        }
-        /* Stil für die Hauptinhaltsbereich */
-        #inhalt {
-            margin-left: 220px; /* Berücksichtigen Sie die Breite des Verzeichnisses */
-            padding: 20px;
-        }
-        /* Stil für Verzeichnislinks */
-        #verzeichnis a {
-            text-decoration: none;
-            color: #333;
-            display: block;
-            margin-bottom: 10px;
-            transition: background-color 0.3s ease;
-            padding: 5px;
-            border-radius: 5px;
-        }
-        /* Animation für Hover auf Verzeichnislinks */
-        #verzeichnis a:hover {
-            background-color: #ddd;
-        }
-        /* Animation für Verzeichnis beim Hover */
-        #verzeichnis:hover {
-            width: 250px;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Klickspiel</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <h1>Klickspiel</h1>
+  <div id="game-container">
+    <!-- Bälle werden hier mit JavaScript hinzugefügt -->
+  </div>
 
-<div id="verzeichnis">
-    <h2>Kategorien</h2>
-    <ul>
-        <li><a href="#schmuck">Schmuck</a></li>
-        <li><a href="#kunstwerke">Kunstwerke</a></li>
-        <li><a href="#handwerk">Handwerkliche Produkte</a></li>
-    </ul>
-</div>
-
-<div id="inhalt">
-    <h1>Willkommen in unserem Online-Shop!</h1>
-    <div id="schmuck">
-        <h2>Schmuck</h2>
-        <!-- Hier können die Schmuckprodukte angezeigt werden -->
-    </div>
-    <div id="kunstwerke">
-        <h2>Kunstwerke</h2>
-        <!-- Hier können die Kunstwerke angezeigt werden -->
-    </div>
-    <div id="handwerk">
-        <h2>Handwerkliche Produkte</h2>
-        <!-- Hier können die handwerklichen Produkte angezeigt werden -->
-    </div>
-</div>
-
+  <script src="script.js"></script>
 </body>
 </html>
