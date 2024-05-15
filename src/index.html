@@ -12,11 +12,31 @@
             background-color: #f2f2f2;
             padding: 20px;
             box-sizing: border-box;
+            transition: width 0.5s ease;
+            overflow: hidden;
         }
         /* Stil für die Hauptinhaltsbereich */
         #inhalt {
             margin-left: 220px; /* Berücksichtigen Sie die Breite des Verzeichnisses */
             padding: 20px;
+        }
+        /* Stil für Verzeichnislinks */
+        #verzeichnis a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+            margin-bottom: 10px;
+            transition: background-color 0.3s ease;
+            padding: 5px;
+            border-radius: 5px;
+        }
+        /* Animation für Hover auf Verzeichnislinks */
+        #verzeichnis a:hover {
+            background-color: #ddd;
+        }
+        /* Animation für Verzeichnis beim Hover */
+        #verzeichnis:hover {
+            width: 250px;
         }
     </style>
 </head>
