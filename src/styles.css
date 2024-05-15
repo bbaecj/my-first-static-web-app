@@ -1,21 +1,66 @@
-* {
-  font-family: Arial, Helvetica, sans-serif;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
-html, body {
-  margin: 0;
-  border: 0;
-  padding: 0;
-  background-color: #fff;
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
-main {
-  margin: auto;
-  width: 50%;
-  padding: 20px;
+nav {
+    background-color: #555;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 200px;
+    overflow-y: auto;
+    transform: translateX(200px);
+    transition: transform 0.3s ease-in-out;
 }
 
-main > h1 {
-  text-align: center;
-  font-size: 3.5em;
+nav.active {
+    transform: translateX(0);
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #777;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Animationen */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInFromRight {
+    from { transform: translateX(100%); }
+    to { transform: translateX(0); }
+}
+
+@keyframes slideInFromLeft {
+    from { transform: translateX(-100%); }
+    to { transform: translateX(0); }
 }
