@@ -1,15 +1,25 @@
 #game-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
 }
 
 .ball {
+  position: absolute;
   width: 50px;
   height: 50px;
   background-color: red; /* Farbe des Balls */
   border-radius: 50%; /* Form des Balls */
-  margin: 10px;
   cursor: pointer;
+  animation: move linear infinite alternate; /* Animation hinzufügen */
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  100% {
+    left: calc(100% - 50px); /* Bewegt den Ball bis zum rechten Rand des Containers */
+  }
 }
