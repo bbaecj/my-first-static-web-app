@@ -1,17 +1,66 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Klickspiel</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Button Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-around;
+    }
+    .button {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .button:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
-  <h1>Klickspiel</h1>
-  <div id="game-container">
-    <!-- Bälle werden hier mit JavaScript hinzugefügt -->
+  <audio id="rickrollAudio">
+    <source src="rickroll.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="button-container">
+    <button class="button" onclick="playRickroll()">Rickroll</button>
+    <button class="button" onclick="redirectToGoogle()">Google</button>
+    <button class="button" onclick="showImage()">Nothing</button>
+    <button class="button" onclick="redirectToFirefox()">Firefox</button>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    function playRickroll() {
+      var audio = document.getElementById('rickrollAudio');
+      audio.play();
+      window.location.href = 'rickroll.html'; // Hier müsstest du die URL zu deiner Rickroll-Seite einfügen
+    }
+
+    function redirectToGoogle() {
+      window.location.href = 'https://www.google.com';
+    }
+
+    function showImage() {
+      window.location.href = 'nothing.html'; // Hier müsstest du die URL zu deiner Seite mit dem Bild einfügen
+    }
+
+    function redirectToFirefox() {
+      window.location.href = 'https://www.mozilla.org/en-US/firefox/new/';
+    }
+  </script>
 </body>
 </html>
