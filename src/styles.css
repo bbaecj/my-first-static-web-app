@@ -1,0 +1,15 @@
+#game-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.ball {
+  width: 50px;
+  height: 50px;
+  background-color: red; /* Farbe des Balls */
+  border-radius: 50%; /* Form des Balls */
+  margin: 10px;
+  cursor: pointer;
+}
