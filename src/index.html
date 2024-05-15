@@ -4,13 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spannender Shop</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 200px;
+            overflow-y: auto;
+            transform: translateX(200px);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        nav.active {
+            transform: translateX(0);
+        }
+
+        nav a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: #777;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
     <header>
         <h1>Willkommen im Spannenden Shop</h1>
         <p>Entdecke aufregende Produkte!</p>
+        <button class="menu-button" onclick="toggleNav()">&#9776;</button>
     </header>
-    <nav>
+    <nav id="sideNav">
         <a href="elektronik.html">Elektronik</a>
         <a href="kleidung.html">Kleidung</a>
         <a href="buecher.html">Bücher</a>
@@ -18,5 +71,12 @@
     <footer>
         <p>&copy; 2024 Spannender Shop. Alle Rechte vorbehalten.</p>
     </footer>
+
+    <script>
+        function toggleNav() {
+            var nav = document.getElementById("sideNav");
+            nav.classList.toggle("active");
+        }
+    </script>
 </body>
 </html>
