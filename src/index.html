@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spannende Website</title>
+    <title>Spannender Shop</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,10 +20,23 @@
         h1 {
             margin-top: 0;
         }
+        nav {
+            background-color: #555;
+            padding: 10px;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 5px 15px;
+        }
+        nav a:hover {
+            background-color: #777;
+        }
         section {
             padding: 20px;
         }
-        .feature {
+        .product {
             background-color: #fff;
             padding: 20px;
             margin-bottom: 20px;
@@ -34,25 +47,49 @@
 </head>
 <body>
     <header>
-        <h1>Willkommen auf unserer spannenden Website!</h1>
-        <p>Erlebe eine Welt voller Wunder und Entdeckungen.</p>
+        <h1>Willkommen im Spannenden Shop</h1>
+        <p>Entdecke aufregende Produkte!</p>
     </header>
-    <section>
-        <div class="feature">
-            <h2>Spannendes Feature 1</h2>
-            <p>Entdecke die Geheimnisse des Universums.</p>
+    <nav>
+        <a href="#elektronik">Elektronik</a>
+        <a href="#kleidung">Kleidung</a>
+        <a href="#bücher">Bücher</a>
+    </nav>
+    <section id="elektronik">
+        <h2>Elektronik</h2>
+        <div class="product">
+            <h3>Smartphones</h3>
+            <p>Entdecke die neuesten Smartphones.</p>
         </div>
-        <div class="feature">
-            <h2>Spannendes Feature 2</h2>
-            <p>Reise durch die Zeit und erlebe historische Ereignisse.</p>
+        <div class="product">
+            <h3>Laptops</h3>
+            <p>Finde leistungsstarke Laptops für deine Bedürfnisse.</p>
         </div>
-        <div class="feature">
-            <h2>Spannendes Feature 3</h2>
-            <p>Tauche ein in fantastische Welten und erlebe Abenteuer.</p>
+    </section>
+    <section id="kleidung">
+        <h2>Kleidung</h2>
+        <div class="product">
+            <h3>T-Shirts</h3>
+            <p>Stöbere durch unsere Auswahl an coolen T-Shirts.</p>
+        </div>
+        <div class="product">
+            <h3>Hosen</h3>
+            <p>Entdecke trendige Hosen für jeden Anlass.</p>
+        </div>
+    </section>
+    <section id="bücher">
+        <h2>Bücher</h2>
+        <div class="product">
+            <h3>Romane</h3>
+            <p>Finde fesselnde Romane für gemütliche Abende.</p>
+        </div>
+        <div class="product">
+            <h3>Sachbücher</h3>
+            <p>Erweitere deinen Horizont mit unseren informativen Sachbüchern.</p>
         </div>
     </section>
     <footer>
-        <p>&copy; 2024 Spannende Website. Alle Rechte vorbehalten.</p>
+        <p>&copy; 2024 Spannender Shop. Alle Rechte vorbehalten.</p>
     </footer>
 </body>
 </html>
