@@ -1,53 +1,20 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Button Weiterleitung</title>
-  <style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      background-image: url('https://th.bing.com/th/id/R.63c78e0bf2583dba5212af8f3d003e61?rik=qGij%2b6ScaSVVww&pid=ImgRaw&r=0');
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-    button {
-      padding: 10px 20px;
-      font-size: 18px;
-      cursor: pointer;
-      background-color: red; /* Hintergrundfarbe rot setzen */
-      color: white; /* Textfarbe weiß setzen */
-      border: none; /* Rand entfernen */
-      border-radius: 5px; /* Randradius setzen */
-      transition: background-color 0.3s; /* Übergangseffekt für Hintergrundfarbe */
-    }
-    button:hover {
-      background-color: darkred; /* Hintergrundfarbe ändern, wenn Maus darüber bewegt wird */
-    }
-    .bird {
-      position: absolute;
-      width: 100px; /* Größe des Vogelbildes anpassen */
-      height: auto;
-      animation: fly 10s linear infinite alternate; /* Animationsdauer und -effekt festlegen */
-    }
-    @keyframes fly {
-      from {
-        left: -100px; /* Startposition des Vogels */
-        transform: scaleX(-1); /* Richtung des Vogels umkehren */
-      }
-      to {
-        left: calc(100vw + 100px); /* Endposition des Vogels */
-        transform: scaleX(-1); /* Richtung des Vogels beibehalten */
-      }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anmeldung</title>
 </head>
 <body>
-  <button onclick="window.location.href='https://th.bing.com/th/id/OIP.d3V8zrdxyA8eID1cam28KgHaDv?w=348&h=177&c=7&r=0&o=5&pid=1.7'">Weiter</button>
-  <img class="bird" src="https://www.pngitem.com/pimgs/m/146-1469115_birds-png-images-download-transparent-bird-hd-png.png" alt="Vogel">
+    <h2>Anmeldung</h2>
+    <form action="https://example.com/signup" method="post">
+        <label for="username">Benutzername:</label><br>
+        <input type="text" id="username" name="username" required><br>
+        <label for="email">E-Mail:</label><br>
+        <input type="email" id="email" name="email" required><br>
+        <label for="password">Passwort:</label><br>
+        <input type="password" id="password" name="password" required><br>
+        <input type="submit" value="Anmelden">
+    </form>
 </body>
 </html>
