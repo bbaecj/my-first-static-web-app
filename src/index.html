@@ -12,7 +12,24 @@
             background-color: #f0f0f0;
         }
         header {
-            backgro
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
             padding: 20px;
             margin: 10px;
             background-color: #fff;
@@ -31,15 +48,16 @@
         #rickroll {
             text-align: center;
         }
-        #rickroll video {
+        #rickroll iframe {
             width: 100%;
-            max-width: 600px;
+            max-width: 560px;
+            height: 315px;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Willkome</h1>
+        <h1>Willkommen auf meiner Webseite</h1>
     </header>
     <nav>
         <a href="#rickroll">Rickroll</a>
@@ -48,10 +66,7 @@
     </nav>
     <section id="rickroll">
         <h2>Rickroll</h2>
-        <video controls autoplay>
-            <source src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" type="video/mp4">
-            Dein Browser unterstützt das Video-Tag nicht.
-        </video>
+        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </section>
     <section id="about">
         <h2>Über mich</h2>
