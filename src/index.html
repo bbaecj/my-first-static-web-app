@@ -3,30 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datei-Upload</title>
+    <title>Meine persönliche Webseite</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #444;
+            padding: 10px 0;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            padding: 20px;
+            margin: 10px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+        #rickroll {
+            text-align: center;
+        }
+        #rickroll video {
+            width: 100%;
+            max-width: 600px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Datei-Upload</h1>
-    <form id="uploadForm">
-        <label for="fileInput">Wählen Sie eine Datei:</label>
-        <input type="file" id="fileInput" name="file">
-        <button type="submit">Hochladen</button>
-    </form>
-    <p id="status"></p>
-
-    <script>
-        document.getElementById('uploadForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Verhindert das Standardverhalten des Formulars
-
-            var fileInput = document.getElementById('fileInput');
-            var file = fileInput.files[0];
-
-            if (file) {
-                document.getElementById('status').textContent = `Datei "${file.name}" wurde hochgeladen, aber nicht gespeichert.`;
-            } else {
-                document.getElementById('status').textContent = "Keine Datei ausgewählt.";
-            }
-        });
-    </script>
+    <header>
+        <h1>Willkommen auf meiner Webseite</h1>
+    </header>
+    <nav>
+        <a href="#rickroll">Rickroll</a>
+        <a href="#about">Über mich</a>
+        <a href="#impressum">Impressum</a>
+    </nav>
+    <section id="rickroll">
+        <h2>Rickroll</h2>
+        <video controls autoplay>
+            <source src="https://www.youtube.com/watch?v=dQw4w9WgXcQ" type="video/mp4">
+            Dein Browser unterstützt das Video-Tag nicht.
+        </video>
+    </section>
+    <section id="about">
+        <h2>Über mich</h2>
+        <p>Hier kannst du etwas über dich erzählen. Deine Hobbys, Interessen, Berufserfahrung oder was du möchtest.</p>
+    </section>
+    <section id="impressum">
+        <h2>Impressum</h2>
+        <p>Hier stehen die Impressumsinformationen, die notwendig sind.</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 Deine Webseite</p>
+    </footer>
 </body>
 </html>
