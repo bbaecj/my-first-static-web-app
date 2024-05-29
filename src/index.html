@@ -1,23 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Datei-Upload</title>
 </head>
 <body>
-    <h1>Login</h1>
-    <form id="loginForm">
-        <input type="text" id="username" placeholder="Username" required>
-        <input type="password" id="password" placeholder="Password" required>
-        <button type="submit">Login</button>
+    <h1>Datei-Upload</h1>
+    <form id="uploadForm">
+        <label for="fileInput">Wählen Sie eine Datei:</label>
+        <input type="file" id="fileInput" name="file">
+        <button type="submit">Hochladen</button>
     </form>
-    <h1>Register</h1>
-    <form id="registerForm">
-        <input type="text" id="newUsername" placeholder="Username" required>
-        <input type="password" id="newPassword" placeholder="Password" required>
-        <button type="submit">Register</button>
-    </form>
-    <script src="app.js"></script>
+    <p id="status"></p>
+
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Verhindert das Standardverhalten des Formulars
+
+            var fileInput = document.getElementById('fileInput');
+            var file = fileInput.files[0];
+
+            if (file) {
+                document.getElementById('status').textContent = `Datei "${file.name}" wurde hochgeladen, aber nicht gespeichert.`;
+            } else {
+                document.getElementById('status').textContent = "Keine Datei ausgewählt.";
+            }
+        });
+    </script>
 </body>
 </html>
